@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "e9577ee1-1b3d-462e-a41c-545ad4cb15a9",
+		"name": "Review-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all review",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4000/reviews",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get review by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4000/review/1",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"review",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create review",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"reviewer_name\": \"Jason\",\n\t\"id_destination\": 2,\n\t\"review\": \"fasilitas komplit\",\n\t\"upload_img\": \"\",\n\t\"rating\": 5\n}"
+				},
+				"url": {
+					"raw": "localhost:4000/create-review",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"create-review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit review",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"reviewer_name\": \"Jason\",\n\t\"review\": \"fasilitas komplit\",\n\t\"upload_img\": \"\",\n\t\"rating\": 5\n}"
+				},
+				"url": {
+					"raw": "localhost:4000/review/5/edit",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"review",
+						"5",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete review",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
